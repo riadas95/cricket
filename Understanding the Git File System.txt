@@ -1,0 +1,76 @@
+Welcome back in order to understand what the commands for Git are doing when you
+enter them we need to first get a grasp on how a Git repository is
+contrived.
+Let's break down the most pertinent elements of the Git file system structure
+that we would be concerned with. First,
+we need to start off with our working directory,
+which is the folder that contains the files that are part of our project.
+This is represented by our orange box.
+When we initialize a Git repository,
+what is essentially happening is a hidden directory is created within our
+working directory named .Git this directory contains the configuration
+information about our repository and all of the tracking information about all
+the files within the project directory.
+The .Git directory has a database file that it uses to keep tabs on all of the
+files that gets added to the project. Here are the basics on how this works.
+When a file is added to the project directory,
+Git is unaware of its existence until you add it to the project.
+This is done by running the Git add command on the file,
+which announces to Git that it should use as database to track changes to the
+file.
+What this does is put the state of the file that was just added to the project
+into a staging area within your project directory.
+Now this is not a physical directory. It's more of a conceptual directory.
+The staging area is just a virtual location that Git uses to track changes to
+files, and we are not actually moving physical files.
+We are just recording the state of the files contents by using SHA 1 hashes.
+In later videos we will perform these actions as we work at the command line to
+add files to our project. Within your repository,
+you will have lines of development known as branches.
+When you commit a change to a project with Git the change state of the file
+leaves the staging area,
+and is recorded in a branch with the master branch typically as a default
+branch. We can have multiple branches within a repository as well.
+Since a branch is a line of development,
+we can commit changes to files to another branch within our repository when we
+want to add a new feature to our application or whatever it is we are working
+on.
+An example of using a branch would be if you decide to change the color layout
+of a document file that you're using Git to keep track of and if you like the
+changes you can merge the changes from a feature branch into your master branch.
+We will go into this in more detail in later videos.
+Let's take a look at a typical Git repository.
+The commit edit message file is a plain text file containing the messages for
+each commit to the repository. Each line in the file is in order of the commit.
+So the first message in the file belongs to the first commit and the second line
+of the file belongs to the second commit and so on.
+The head file is another plain text file and this one contains a reference to
+the current branch that we are working on.
+The config file will be looked at in more detail in a later video,
+but this contains the configuration information about our repository,
+such as the developer's username and email address.
+The description file is another plain text file that contains the name of the
+repository. This is typically used by Git web,
+which is a web front end to Git that you can install the hooks directory
+contains scripts that you can create to set up some automated tasks that can be
+run during some particular phases of the Git process.
+The index file is what keeps track of the items in our staging area.
+It also keeps track of files that are ready to be committed.
+The info directory will contain items such as an exclude file,
+which dictates what files that Git will ignore.
+Typically you would use a Git ignore file instead,
+which we will cover later on in the course. Next,
+the logs directory contains the log files for the activity that goes on within
+the Git repository, such as commits and changes to the project.
+The objects directory is actually a database consisting of compressed files that
+are hashed versions of contents of files that have been committed to the
+repository.
+The index file is the link between this database and what is currently sitting
+in the working directory.
+The rest directory contains reference files in folders for the branches and tags
+of your repository.
+So this was a whirlwind tour of the basics of the Git repository.
+As we go along,
+we will get more comfortable with the process of using Git by applying our new
+understanding of how Git works with the files that we ask it to keep track of
+for us. Let's mark this lesson as complete and move on to the next.
